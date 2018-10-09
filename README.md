@@ -34,11 +34,13 @@ when you are prompted for environment, default is master. Otherwise type in envi
 At this point, you should be able to log into your local environment with User 1 and test any changes you’d like to make. If not, and if you have an account on the live site, try to use your account credentials to log in. Note: if you are not an administrator on the real site, you might want to run: lando drush user-add-role administrator [your-user-name-here]
 Then, at least locally, you will be an administrator.
 
-Enable Twig Debug:
+---
+
+## Enable Twig Debug:
 1) Copy web/sites/example.settings.local.php to web/sites/default/settings.local.php
 2) lando drush cr
 
-Steps to update local:
+## Steps to update local:
 1) git pull (Note: may need to do ‘git clean -n’ then ‘git clean -f’ first)
 2) platform build
 3) platform db:dump --gzip -f database.sql.gz
